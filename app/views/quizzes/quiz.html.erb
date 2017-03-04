@@ -1,0 +1,20 @@
+<div class="row">
+
+  <div class="col-md-6 col-md-offset-3">
+    <% @questions.each do |question| %>
+    <h1>¿Cual es la bandera de <%= question.content %>?</h1>
+  </div> 
+  <div class="col-md-6 col-md-offset-3">
+      	<% @choices = question.choices.shuffle %>
+     	<% @choices.each do |choice| %>
+     	<%= link_to "holasss!!",  {controller: "quizzes", action: "show", click: choice } %>
+		<%= image_tag choice.answer, class: "flag-img" %>
+        <% end %>
+    <% end %>
+    <button type="button" class="btn btn-primary"><%= link_to 'Salir', root_path %></button>
+  </div>
+</div>
+
+<br>
+
+

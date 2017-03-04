@@ -1,0 +1,23 @@
+<h1>Ranking</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Puntaje</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_quizzes.order('score desc').each do |user_quiz| %>
+      <tr>
+        <td><%= User.find(user_quiz.user_id).name %></td>
+        <td><%= user_quiz.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

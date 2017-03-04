@@ -1,0 +1,13 @@
+.flag-img {
+	height: 116px;
+    width: 235px;
+    border: solid;
+    border-color: #ffffff;
+    padding: 5px;
+    float: left;
+}
+
+.flag-img:nth-child(even):before {
+	content: "";
+	clear: both;
+}

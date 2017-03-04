@@ -1,0 +1,3 @@
+class UserChoicesController < ApplicationController
+	
+end
